@@ -8,6 +8,7 @@ import {
   FILTER_TODOS,
   MARK_ALL_COMPLETED,
   UPDATE_SEARCH_TERM,
+  SET_TODOS,
 } from './actionTypes';
 
 const initialState = { todos: [], filter: 'ALL', searchTerm: '' };
@@ -53,6 +54,12 @@ const todoReducer = (state = initialState, action) => {
         ),
         filter: state.filter,
         searchTerm: state.searchTerm,
+      };
+
+    case SET_TODOS:
+      return {
+        ...state,
+        todos: action.payload,
       };
 
     case FILTER_TODOS:

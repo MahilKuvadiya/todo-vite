@@ -23,8 +23,8 @@ const TaskList = () => {
   return (
     <ul>
       <li className="my-2 text-sm italic text-gray-400">All Your Notes Here...</li>
-      {filteredTasks.map((task, position) => (
-        <TaskItem key={position} task={task} position={position} />
+      {filteredTasks.map((task, key) => (
+        <TaskItem index={key} todo={task}/>
       ))}
     </ul>
   );

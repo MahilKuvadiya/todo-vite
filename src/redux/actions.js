@@ -8,6 +8,7 @@ import {
   FILTER_TODOS,
   MARK_ALL_COMPLETED,
   UPDATE_SEARCH_TERM,
+  SET_TODOS
 } from './actionTypes';
 
 export const addTodo = (text) => ({
@@ -17,7 +18,7 @@ export const addTodo = (text) => ({
 
 export const setTodos = (todos) => ({
   type: SET_TODOS,
-  payload: { todos },
+  payload: todos,
 });
 
 export const toggleTodo = (id) => ({

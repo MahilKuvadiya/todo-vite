@@ -43,39 +43,39 @@ const TodoItem = ({ todo, index }) => {
         <span className="mr-4 text-gray-500">
           {index + 1}.
         </span>
-        <span className={`mr-4 ${todo.completed ? 'line-through text-gray-500' : ''}`}>
-          {todo.text}
+        <span className={`mr-4 ${todo && todo.completed ? 'line-through text-gray-500' : ''}`}>
+          {todo && todo.text}
         </span>
       </div>
       <div className='space-x-3 ml-8'>
         <button
           className="mr-2 text-sm bg-blue-500 text-white sm:px-2 px-1 py-1 rounded"
-          onClick={() => handleToggleComplete(todo.id, todo.completed)} // Use todo.id instead of index
+          onClick={() => handleToggleComplete(todo && todo.id, todo && todo.completed)} // Use todo.id instead of index
         >
-          {todo.completed ? <FaToggleOff /> : <FaToggleOn />}
+          {todo && todo.completed ? <FaToggleOff /> : <FaToggleOn />}
         </button>
         <button
           className="mr-2 text-sm bg-red-500 text-white sm:px-2 px-1 py-1 rounded"
-          onClick={() => handleDelete(todo.id)} // Use todo.id instead of index
+          onClick={() => handleDelete(todo && todo.id)} // Use todo.id instead of index
         >
           <FaTrash />
         </button>
-        {!todo.completed && (
+        {/* {todo && !todo.completed && (
           <button
             className="text-sm bg-green-500 text-white sm:px-2 px-1 py-1 rounded"
-            onClick={() => handleToggleComplete(todo.id, todo.completed)} // Use todo.id instead of index
+            onClick={() => handleToggleComplete(todo && todo.id, todo && todo.completed)} // Use todo.id instead of index
           >
             <FaCheck />
           </button>
         )}
-        {todo.completed && (
+        {todo && todo.completed && (
           <button
             className="text-sm bg-yellow-500 text-white sm:px-2 px-1 py-1 rounded"
-            onClick={() => handleToggleComplete(todo.id, todo.completed)} // Use todo.id instead of index
+            onClick={() => handleToggleComplete(todo.id,todo.completed)} // Use todo.id instead of index
           >
             <FaTimes />
           </button>
-        )}
+        )} */}
       </div>
     </li>
   );

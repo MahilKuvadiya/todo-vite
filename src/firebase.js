@@ -2,24 +2,16 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
-
-  apiKey: "AIzaSyAMpcZx_46AVP4QmANr97J3wsRLiqpVodA",
-
-  authDomain: "todo-831d8.firebaseapp.com",
-
-  projectId: "todo-831d8",
-
-  storageBucket: "todo-831d8.appspot.com",
-
-  messagingSenderId: "34311872410",
-
-  appId: "1:34311872410:web:a47fbbb2dc59b06910a423",
-
-  measurementId: "G-2W9GMHWVBH"
-
+  apiKey: "AIzaSyBPWEUk5YU5x2l_fUGV_yANjd6kqi7W0sU",
+  authDomain: "todoapp-15135.firebaseapp.com",
+  projectId: "todoapp-15135",
+  storageBucket: "todoapp-15135.appspot.com",
+  messagingSenderId: "492899077955",
+  appId: "1:492899077955:web:1f52af891b27f1d6aea9f6",
+  measurementId: "G-RVE1K13J9P"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
