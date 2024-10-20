@@ -15,6 +15,11 @@ export const addTodo = (text) => ({
   payload: { text },
 });
 
+export const setTodos = (todos) => ({
+  type: SET_TODOS,
+  payload: { todos },
+});
+
 export const toggleTodo = (id) => ({
   type: TOGGLE_TODO,
   payload: { id },
